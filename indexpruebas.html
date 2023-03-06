@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a href="#" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span> PISTA
+    </a>
+    <header id="header">
+        <a href="" class="logo">JungleRoom</a>
+    </header>
+
+    <section>
+        <h2 id="text"><span>Es tiempo para una nueva</span><br>¡Aventura!</h2>
+        <img src="imgs/pajaro1.png" id="pajaro1" alt="">
+        <img src="imgs/pajaro2.png" id="pajaro2" alt="">
+        <img src="imgs/arbol.png" id="bosque" alt="">
+        <a href="" id="btn">¡Jugar!</a>
+        <img src="imgs/piedras.png" id="piedras" alt="">
+        <img src="imgs/mar.png" id="mar" alt="">
+
+    </section>
+
+    <div class="sec">
+        <h2>Como jugar</h2>
+        <p>¡Bienvenido al Escape Room de la búsqueda del tesoro del famoso capitán BarbaNegra! <br> Aquí te explicaremos las reglas del juego para que puedas disfrutar al máximo de esta emocionante experiencia. <br><br> 1.Objetivo: El objetivo del juego
+            es resolver todas las pruebas que te propone para resolver el capitán para escapar de la habitación virtual antes de que se acabe el tiempo. Para resolver las pruebas, tendrás que buscar pistas y respuestas en la habitación virtual.
+            <br><br> 2. Tiempo: Tendrás un tiempo limitado para resolver todas las pruebas. El tiempo se muestra en la pantalla y comienza a contar desde el momento en que comienzas el juego. <br> <br> 3.Pruebas: Todas las pruebas del juego estarán relacionadas
+            con películas de piratas. Tendrás que utilizar tus conocimientos para resolver las pruebas correctamente e ir pasando . <br><br> 4.Pistas: Hay pistas ocultas en la habitación virtual que te ayudarán a responder las preguntas. Tendrás que buscar
+            cuidadosamente en la habitación para encontrarlas.
+            <br><br> 5. Ayuda: Si te quedas atascado en una pregunta, puedes utilizar el botón de "ayuda" para obtener una pista adicional. Pero ten cuidado, cada vez que uses una pista, se reducirá el tiempo que tienes para escapar. <br><br> 6.Respuestas:
+            Cuando creas que tienes la respuesta correcta a una pregunta, deberás ingresarla en la pantalla. Si es correcta, avanzarás al siguiente nivel. Si es incorrecta, tendrás que seguir buscando pistas y respuestas. <br><br> 7.Equipo: Puedes jugar
+            solo o con amigos. Si juegas con amigos, asegúrate de colaborar y trabajar juntos para resolver las preguntas y escapar de la habitación virtual. <br> 8.Diviértete: Lo más importante es que disfrutes del juego. Si te quedas atascado en una
+            pregunta, no te preocupes demasiado y sigue adelante. Recuerda que esto es solo un juego y lo importante es divertirse. <br><br> ¡Ahora estás listo para comenzar tu aventura en el Escape Room de la búsqueda del tesoro del famoso capitán BarbaNegra
+            en línea! Buena suerte y que comience la diversión.</p>
+    </div>
+
+
+
+    <script>
+        let headerText = document.getElementById('text');
+        let bird1 = document.getElementById('pajaro1');
+        let bird2 = document.getElementById('pajaro2');
+        let button = document.getElementById('btn');
+        let rocks = document.getElementById('piedras');
+        let forest = document.getElementById('bosque');
+        let sea = document.getElementById('mar');
+        let header = document.getElementById('header');
+
+        function scrollInit() {
+            let value = window.scrollY;
+
+            if (value < 275) {
+
+                // Actualizar la posición de cada elemento en función del valor del scroll
+                headerText.style.top = 55 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                button.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.2 + 'px';
+            }
+
+        }
+        // Añadir evento de scroll al objeto window
+        window.addEventListener('scroll', scrollInit);
+    </script>
+    <div class="ventana">
+
+    </div>
+
+</body>
+
+</html>
